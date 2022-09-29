@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Montserrat:wght@200;300;400;500&family=Poppins:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500&family=Inter:wght@200;300;400;500&family=Montserrat:wght@200;300;400;500&family=Poppins:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box
+}
+
+body {
+    font-family: "Monteserrat", sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(img/background-img.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+body::before {
+    content: '';
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 500px;
+    height: 270px;
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+    border-radius: 15px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    text-shadow: 0 2px 0 black;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 10px 50px -10px black;
+    animation: carAnimation 1s alternate infinite;
+}
+
+@keyframes carAnimation {
+    from {
+        transform: translateY(-20px);
+    }
+}
+
+.card::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 100%;
+    box-shadow: 0 0 50px 10px rgba(38, 38, 38, 0.9) inset;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card-top,
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-top img {
+    width: 40px;
+    height: 40px;
+    rotate: 47deg;
+    visibility: visible;
+    z-index: 1;
+}
+
+.card-title {
+    font-size: 1.8rem;
+    z-index: 1;
+}
+
+.center {
+    z-index: 1;
+    margin-left: 75%;
+}
+
+.center img {
+    width: 95px;
+    height: 45px;
+    padding-left: 2rem;
+    margin-left: -20px;
+    margin-top: 10%;
+}
+
+.card-bottom-right img {
+    width: 90px;
+    height: auto;
+    margin-bottom: 5px;
+    margin-left: 70%;
+    margin-top: -60px;
+    position: fixed;
+}
+
+.card-bottom-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-bottom-left {
+    gap: 0.7rem;
+}
+
+div :is(.date, .name) {
+    margin-top: 20px;
+}
+
+.card-bottom-right span {
+    margin-left: 75%;
+    position: fixed;
+}
+
+.card-number {
+    font-family: "Exo", sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+}
