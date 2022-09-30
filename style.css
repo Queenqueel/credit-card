@@ -34,7 +34,7 @@ body::before {
     justify-content: space-between;
     width: 500px;
     height: 270px;
-    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+    background: linear-gradient(70deg, rgba(252, 176, 69, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(131, 58, 180, 1) 100%);
     border-radius: 15px;
     color: white;
     position: relative;
@@ -74,9 +74,7 @@ body::before {
 .card-top img {
     width: 40px;
     height: 40px;
-    rotate: 47deg;
     visibility: visible;
-    z-index: 1;
 }
 
 .card-title {
@@ -101,18 +99,13 @@ body::before {
     width: 90px;
     height: auto;
     margin-bottom: 5px;
-    margin-left: 70%;
+    margin-left: 80%;
     margin-top: -60px;
-    position: fixed;
-}
-
-.card-bottom-left {
-    display: flex;
-    flex-direction: column;
 }
 
 .card-bottom-left {
     gap: 0.7rem;
+    font-size: 20px;
 }
 
 div :is(.date, .name) {
@@ -120,8 +113,8 @@ div :is(.date, .name) {
 }
 
 .card-bottom-right span {
+    position: absolute;
     margin-left: 75%;
-    position: fixed;
 }
 
 .card-number {
